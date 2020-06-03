@@ -1,0 +1,12 @@
+spacy==2.2.2
+nltk
+scispacy==0.2.4
+numpy
+matplotlib
+seaborn
+
+pytest
+
+# only needed to redownload the data
+psycopg2-binary
+elasticsearch==7.0.2
