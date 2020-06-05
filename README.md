@@ -12,7 +12,7 @@ The script to generate the underlying json files with all the text and citations
 ## Concept scoring
 To rerun concept scoring you need to:
 
-1. [Optional] Create and activate new conda environment 
+1. [Optional] Create and activate new conda environment.
    ```
    conda create -n forecite python=3.7
    conda activate forecite
