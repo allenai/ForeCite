@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from new_topics.topic_identification.identify_topics import (
+from forecite.topic_identification.identify_topics import (
     compute_citation_scores,
     compute_cnlc_score,
     compute_loor_score,
@@ -155,6 +155,7 @@ class TestScoringFunctions(unittest.TestCase):
             self.s2_id_to_references,
             self.s2_id_to_canonical,
             self.s2_id_to_date_key,
+            {}
         )
 
         expected_scores = [
