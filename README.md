@@ -12,10 +12,27 @@ The script to generate the underlying json files with all the text and citations
 ## Concept scoring
 To rerun concept scoring you need to:
 
-1. [Optional] Create and activate new conda environment `conda create -n forecite python=3.7` and `conda activate forecite`
-2. Setup package and install requirements `pip install -r requirements.txt` and `pip install -e .` (from the root of this repo)
-3. Download spacy model `python -m spacy download en_core_web_md`
-4. Run concept scoring command `python topic_identification/identify_topics.py --dataset arxiv_no_refs --method forecite --candidates title`
+1. [Optional] Create and activate new conda environment.
+   ```
+   conda create -n forecite python=3.7
+   conda activate forecite
+   ```
+   
+2. Setup package and install requirements from the root of this repository.
+    ```
+    pip install -r requirements.txt
+    pip install -e .
+    ```
+    
+3. Download spacy model.
+   ```
+   python -m spacy download en_core_web_md
+   ```
+
+4. Run concept scoring command. 
+   ```
+   python topic_identification/identify_topics.py --dataset arxiv_no_refs --method forecite --candidates title
+   ```
 
 Note: there is a small amount of unseeded randomness [here](https://github.com/allenai/ForeCite/tree/master/forecite/topic_identification/identify_topics.py:98) and so your output may differ slightly.
 
