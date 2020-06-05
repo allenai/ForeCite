@@ -388,7 +388,7 @@ def identify_topics_arxiv_no_refs(method: str, candidates: str):
     for noun_phrase_cluster in tqdm(
         candidate_expanded_noun_phrases, desc="Computing citation scores"
     ):
-        if method == "ours":
+        if method == "forecite":
             citation_scores = compute_citation_scores(
                 noun_phrase_cluster,
                 combined_noun_phrases,
@@ -423,7 +423,7 @@ def identify_topics_arxiv_no_refs(method: str, candidates: str):
             )
             score_results.append(score)
 
-    if method == "ours":
+    if method == "forecite":
         score_results = [
             (
                 result[0],
@@ -442,14 +442,14 @@ def identify_topics_arxiv_no_refs(method: str, candidates: str):
         score_results = sorted(score_results, key=lambda x: x[1], reverse=True)
 
     if candidates == "title":
-        if method == "ours":
+        if method == "forecite":
             output_file_path = NO_REFS_ARXIV_CS_TITLE_CANDIDATES_SCORES_PATH
         elif method == "cnlc":
             output_file_path = NO_REFS_ARXIV_CS_TITLE_CANDIDATES_CNLC_PATH
         elif method == "loor":
             output_file_path = NO_REFS_ARXIV_CS_TITLE_CANDIDATES_LOOR_PATH
     elif candidates == "abstract":
-        if method == "ours":
+        if method == "forecite":
             output_file_path = NO_REFS_ARXIV_CS_ABSTRACT_CANDIDATES_SCORES_PATH
         elif method == "cnlc":
             output_file_path = NO_REFS_ARXIV_CS_ABSTRACT_CANDIDATES_CNLC_PATH
