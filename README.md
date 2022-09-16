@@ -1,5 +1,5 @@
 # ForeCite
-This repository contains data and code for the paper ["High-Precision Extraction of Emerging Concepts from Scientific Literature"](http://s2.link/CorpusID:219636085)
+This repository contains data and code for the paper ["High-Precision Extraction of Emerging Concepts from Scientific Literature"](https://www.semanticscholar.org/paper/High-Precision-Extraction-of-Emerging-Concepts-from-King-Downey/82af9bb84594d4fce17a5fb88888f8bdade0cd58)
 
 ## Downloading the data
 You will first want to download [this](http://s3.console.aws.amazon.com/s3/buckets/ai2-s2-forecite/?region=us-west-2) S3 bucket to `ForeCite/data/arxiv_no_refs`.
